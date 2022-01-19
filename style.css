@@ -1,0 +1,236 @@
+h1 {font-size: 42px; font-weight: bold;}
+
+h2 {font-size: 32px; font-weight: bold;}
+
+h3 {font-size: 24px; font-weight: bold;}
+ 
+#index {font-size: 18px;}
+
+#index-column > p {font-size: 24px;}
+
+.line {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    margin: auto;
+}
+
+.columns {
+    display: flex;
+    flex-direction: column;
+} 
+
+/*один столбец*/
+#index-column {
+    display: inline-block;
+    width: 100%;
+}
+
+/*два столбца*/
+.two-columns {
+  display: inline-block;
+  width: 100%;
+  margin-right: 5%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.two-columns:last-of-type {
+    margin-right: 0;
+}
+
+/*три столбца*/
+.tree-columns {
+    display: inline-block;
+    width: 31%;
+    margin-right: 5%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.tree-columns:last-child {
+    margin-right: 0;
+}
+
+/*маркированный список*/
+.helps-list {padding: 0;}
+
+.helps-list > li {
+    list-style: none;
+    line-height: 1.5;
+}
+
+.helps-list > li::before {
+    content: '\2713';
+    font-size: 32px;
+    vertical-align: middle;
+}
+
+/*несколько блоков*/
+.block-list {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+/*блок*/
+#block-search {
+    border: 1px solid gray;
+    border-radius: 2px;
+    padding: 2%;
+    float: left;
+    width: 50%;
+    margin-right: 3%;
+    margin-bottom: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#block-search:last-of-type {
+    margin-right: 0;
+}
+
+#arrow {
+  font-size: 20px;
+  float: right;
+}
+
+/*обёртка страницы*/
+wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+  flex: 1;
+  margin: auto;
+  width: 75%;
+}
+
+/* Для девайсов, у которых ширина в разрешении экрана больше или равна 1024, отступ справа равен 0*/
+@media screen and (min-width: 1024px) {
+  .zero-padding {
+    padding-right: 0;
+  }
+}
+
+main > div {margin-top: 5%;}
+
+footer {
+  margin: auto;
+  width: 100%;
+  background-color: rgba(229, 229, 229, 1);
+  font-size: 18px;
+}
+
+footer > div.line:first-of-type {
+  margin-top: 5%;
+}
+
+footer > div.line {
+    margin-top: 3%;
+    display: flex;
+    /*justify-content: center;*/
+    flex-direction: row;
+}
+
+footer > div.line:last-of-type {
+  margin-bottom: 5%;
+}
+
+footer > div.line > div.two-columns {
+
+  margin: auto;
+}
+
+footer > div.line > div.two-columns:last-of-type {
+  margin-right: 0;
+}
+
+/* форма авторизации и регистрации */
+@media screen and (min-width: 1023px) {
+  #login-form {
+    width: 50%;
+    top: 70px;
+  }
+
+  #index-column > img {
+    float: right;
+  }
+}
+
+#text-login {	
+	font-style: normal;
+	font-weight: bold;
+	font-size: 32px;
+	line-height: 39px;
+	text-align: center;
+  
+	/* color: #000000; */
+}
+
+#button-login {
+	width: 185px;
+}
+
+/* хедер */
+.navbar {
+  height: 120px;
+}
+
+.navbar-brand {
+  margin-left: 3%;
+  height: 100%;
+}
+
+.navbar-item {
+  margin-left: 3%;
+} 
+
+.navbar-end {
+  margin-right: 3%;
+}
+
+a.navbar-burger {
+  width: 120px;
+  height: 120px; 
+}
+
+
+
+@media screen and (max-width: 1023px) {
+  #index-column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #index-column > img {
+    margin-top: 5%;
+    order: 4;
+  }
+
+  .block-list {
+    display: inline-block;
+  }
+
+  #block-search {
+    width: 100%;
+  }
+
+  #block-search:last-of-type {
+    margin-top: 5%;
+  }
+
+  footer {width: 100%}
+
+  #login-form {
+    width: 100%;
+    top: 70px;
+  }
+}
